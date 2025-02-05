@@ -1,4 +1,6 @@
-﻿@{
+﻿<!-- Weston Watson, Section 3 -->
+@{
+    // Setting the page title dynamically
     ViewData["Title"] = "Lesson Hub";
 }
 
@@ -7,20 +9,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Displaying the page title dynamically -->
     <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/css/site.css"> <!-- External CSS -->
+
+    <!-- Linking the main CSS file for styling -->
+    <link rel="stylesheet" href="~/css/site.css">
 </head>
 <body>
 <div class="container text-center">
-    <!-- Main Title -->
+    <!-- Page Header -->
     <h2 class="display-4"><strong>Snowboarding Lessons w/ Weston</strong></h2>
-    
-    <!-- Section 1: Image on Left, Text on Right -->
+
+    <!-- Section 1: About Me (Image on Left, Text on Right) -->
     <div class="row align-items-center my-4">
         <div class="col-md-5 text-center">
+            <!-- Image of Weston in his 4Runner -->
             <img src="~/me-1.png" alt="Weston in 4Runner" class="img-fluid rounded w-100">
         </div>
         <div class="col-md-7 text-md-start">
+            <!-- About Me Section -->
             <h2>About Me</h2>
             <p>
                 Hey, I'm Weston! Snowboarding is more than just a hobby for me—it's a lifestyle.
@@ -35,9 +43,10 @@
         </div>
     </div>
 
-    <!-- Section 2: Text on Left, Image on Right -->
+    <!-- Section 2: What My Lessons Include (Text on Left, Image on Right) -->
     <div class="row align-items-center my-4">
         <div class="col-md-7 text-md-end">
+            <!-- Lesson Details Section -->
             <h2>What My Lessons Include</h2>
             <p>
                 Whether you're a complete beginner or looking to refine your skills, my lessons are
@@ -48,9 +57,12 @@
                 Safety and technique are my top priorities. I'll guide you through proper stance,
                 weight distribution, and how to read the mountain for the best possible ride.
             </p>
+
+            <!-- Button linking to the Lessons Calculator page -->
             <a href="@Url.Action("Calculator", "Home")" class="btn btn-primary">Lessons Calculator</a>
         </div>
         <div class="col-md-5 text-center">
+            <!-- Image of Weston on the Mountain -->
             <img src="~/me-2.png" alt="Weston on the Mountain" class="img-fluid rounded w-100">
         </div>
     </div>

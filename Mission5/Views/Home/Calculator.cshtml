@@ -1,4 +1,7 @@
-﻿@{
+﻿<!-- Weston Watson, Section 3 -->
+
+@{
+    // Setting the page title dynamically
     ViewData["Title"] = "Lessons Calculator";
 }
 
@@ -7,40 +10,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Displaying the page title dynamically -->
     <title>@ViewData["Title"]</title>
+
+    <!-- Linking the main CSS file -->
     <link rel="stylesheet" href="~/css/site.css">
+
+    <!-- Including jQuery for handling interactive behavior -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <div class="container">
+    <!-- Page Header -->
     <h1 class="text-center">@ViewData["Title"]</h1>
 
     <p class="text-center">Enter the number of hours you need for snowboarding lessons:</p>
 
+    <!-- Input field for entering the number of lesson hours -->
     <div class="form-group">
         <label for="hours">Hours Needed:</label>
         <input type="number" id="hours" class="form-control" min="1">
+
+        <!-- Error message for invalid input (hidden by default) -->
         <small id="error-message" class="text-danger d-none">Please enter a valid positive number.</small>
     </div>
 
+    <!-- Displaying the fixed hourly rate (read-only) -->
     <div class="form-group">
         <label for="rate">Hourly Rate:</label>
         <input type="text" id="rate" class="form-control" value="75" readonly>
     </div>
 
+    <!-- Button to trigger total cost calculation -->
     <button id="calculate" class="btn btn-primary">Calculate Total</button>
 
+    <!-- Field to display the calculated total cost -->
     <div class="form-group mt-3">
         <label for="total">Total Cost:</label>
         <input type="text" id="total" class="form-control" readonly>
     </div>
 
+    <!-- Navigation button to go back to the home page -->
     <nav class="text-center mt-4">
         <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">Back to Home</a>
     </nav>
 </div>
 
-<!-- Load the external JavaScript file -->
+<!-- Load the external JavaScript file that contains calculation logic -->
 <script src="~/js/lessonsCalculator.js"></script>
 
 </body>
