@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Lesson Hub";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css"> <!-- External CSS -->
+</head>
+<body>
+<div class="container text-center">
+    <!-- Main Title -->
+    <h2 class="display-4"><strong>Snowboarding Lessons w/ Weston</strong></h2>
+    
+    <!-- Section 1: Image on Left, Text on Right -->
+    <div class="row align-items-center my-4">
+        <div class="col-md-5 text-center">
+            <img src="~/me-1.png" alt="Weston in 4Runner" class="img-fluid rounded w-100">
+        </div>
+        <div class="col-md-7 text-md-start">
+            <h2>About Me</h2>
+            <p>
+                Hey, I'm Weston! Snowboarding is more than just a hobby for me—it's a lifestyle.
+                Whether I'm carving through fresh powder, tackling new tricks in the terrain park,
+                or exploring backcountry trails, the mountains are where I feel most alive.
+            </p>
+            <p>
+                There's something about the speed, the challenge, and the pure adrenaline rush that
+                makes snowboarding the ultimate thrill. I love sharing my passion with others and
+                helping them experience the joy of riding.
+            </p>
+        </div>
+    </div>
+
+    <!-- Section 2: Text on Left, Image on Right -->
+    <div class="row align-items-center my-4">
+        <div class="col-md-7 text-md-end">
+            <h2>What My Lessons Include</h2>
+            <p>
+                Whether you're a complete beginner or looking to refine your skills, my lessons are
+                tailored to your experience level. I’ll teach you the fundamentals of balance, turning,
+                and stopping, along with tips on carving, hitting small jumps, and navigating different terrain.
+            </p>
+            <p>
+                Safety and technique are my top priorities. I'll guide you through proper stance,
+                weight distribution, and how to read the mountain for the best possible ride.
+            </p>
+            <a href="@Url.Action("Calculator", "Home")" class="btn btn-primary">Lessons Calculator</a>
+        </div>
+        <div class="col-md-5 text-center">
+            <img src="~/me-2.png" alt="Weston on the Mountain" class="img-fluid rounded w-100">
+        </div>
+    </div>
+</div>
+</body>
+</html>
